@@ -69,6 +69,10 @@ class BinarySearchTree {
 
   inOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return;
+    let leftNode = this.inOrderTraversal(currentNode.left);
+    console.log(currentNode.val);
+    let rightNode = this.inOrderTraversal(currentNode.right);
   }
 
 
