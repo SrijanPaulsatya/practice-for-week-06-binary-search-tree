@@ -78,6 +78,10 @@ class BinarySearchTree {
 
   postOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return;
+    let leftNode = this.postOrderTraversal(currentNode.left);
+    let rightNode = this.postOrderTraversal(currentNode.right);
+    console.log(currentNode.val);
   }
 
     // Breadth First Traversal - Iterative
